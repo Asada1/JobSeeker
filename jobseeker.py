@@ -1,4 +1,6 @@
 import smtplib
+from email.mime.text import MIMEText
+from email.header import Header
 
 
 def send_email(message):
@@ -10,12 +12,13 @@ def send_email(message):
 
     try:
         server.login(sender, password)
-        server.sendmail(sender, sender, message)
+        mime = MIMEText(message, 'plain', 'utf-8')
+        server.sendmail(sender, sender, mime.as_string())
 
         return "The message was sent successfully!"
 
     except Exception as _ex:
-        return f"{_ex}\nSomething went wrong... Please, check your login/password or account settings!"
+        return f"{_ex}\nSomething went wrong... Please, check your settings!"
 
 
 def main():
