@@ -2,7 +2,7 @@ import smtplib
 
 
 def send_email(message):
-    sender = "sshch1987.employment@gmail.com"
+    sender = "whatever"
     password = "whatever"
 
     server = smtplib.SMTP("smtp.gmail.com", 587)
