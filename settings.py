@@ -7,4 +7,4 @@ def get_settings():
 
     server = smtplib.SMTP("smtp.gmail.com", 587)
 
-    
+    return sender, password, server
