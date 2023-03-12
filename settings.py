@@ -9,4 +9,4 @@ def get_settings():
 
     setting_tuple = (sender, password, server)
 
-    return 
+    return setting_tuple
