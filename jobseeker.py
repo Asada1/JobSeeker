@@ -10,9 +10,9 @@ def send_email(message):
     # password = "##whatever**"
 
     # server = smtplib.SMTP("smtp.gmail.com", 587)
-    sender = messages.compose_message()[0]
-    password = messages.compose_message()[1]
-    server = messages.compose_message()[2]
+    sender = settings.get_settings()[0]
+    password = settings.get_settings()[1]
+    server = settings.get_settings()[2]
 
     server.starttls()
 
