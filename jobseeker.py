@@ -3,7 +3,7 @@ from email.mime.text import MIMEText
 from email.header import Header
 
 import messages, settings
-import messages, settings import messages, settings
+import messages, settings
 
 
 def send_email(message):
