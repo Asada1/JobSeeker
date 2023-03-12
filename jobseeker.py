@@ -6,10 +6,14 @@ import messages, settings
 
 
 def send_email(message):
-    sender = "your.email@isegal.de"
-    password = "##whatever**"
+    # sender = "your.email@isegal.de"
+    # password = "##whatever**"
 
-    server = smtplib.SMTP("smtp.gmail.com", 587)
+    # server = smtplib.SMTP("smtp.gmail.com", 587)
+    sender = messages.compose_message()[0]
+    password = messages.compose_message()[1]
+    server = messages.compose_message()[2]
+
     server.starttls()
 
     try:
