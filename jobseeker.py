@@ -2,7 +2,8 @@ import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 
-import messages, settings
+import messages
+import settings
 
 
 def send_email(message):
