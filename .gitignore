@@ -131,9 +131,9 @@ dmypy.json
 .idea/
 private.py
 .messages/
-receivers.txt
-hh_vacancies.txt
-sender.txt
-key.txt
+keybox/receivers.txt
+keybox/hh_vacancies.txt
+keybox/sender.txt
+keybox/key.txt
 keybox
 .keybox/

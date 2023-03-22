@@ -2,14 +2,14 @@ import smtplib
 
 
 def get_sender():
-    with open('sender.txt', 'r') as senders:
+    with open('keybox/sender.txt', 'r') as senders:
         sender = str(senders.read())
 
     return sender
 
 
 def get_key():
-    with open('key.txt', 'r') as keylock:
+    with open('keybox/key.txt', 'r') as keylock:
         key = str(keylock.read())
 
     return key

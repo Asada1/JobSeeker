@@ -11,7 +11,7 @@ def get_subject():
 
 
 def get_receiver():
-    with open('receivers.txt', 'r') as receivers_list:
+    with open('keybox/receivers.txt', 'r') as receivers_list:
         for line in receivers_list:
             receiver = line
 
