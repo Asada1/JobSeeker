@@ -1,6 +1,14 @@
 import smtplib
 
 
+def get_sender():
+    ...
+
+
+def get_key():
+    ...
+
+
 def get_settings():
     sender = "your.email@isegal.de"
     password = "##whatever**"
