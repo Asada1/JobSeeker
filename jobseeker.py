@@ -29,7 +29,7 @@ def send_email(message):
 
 
 def main():
-    message = input("Type in your message here:  ")
+    message = messages.get_message()
     print(send_email(message=message))
 
 
