@@ -20,6 +20,7 @@ def send_email(message):
     try:
         server.login(sender, password)
         mime = MIMEText(message, 'plain', 'utf-8')
+        message["Subject"] = messages.get_subject()
         server.sendmail(sender, sender, mime.as_string())
 
         return "The message was sent successfully!"
