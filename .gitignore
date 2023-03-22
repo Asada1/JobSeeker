@@ -135,3 +135,5 @@ receivers.txt
 hh_vacancies.txt
 sender.txt
 key.txt
+keybox
+.keybox/

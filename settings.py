@@ -9,7 +9,7 @@ def get_sender():
 
 
 def get_key():
-    with open('keys.txt', 'r') as keylock:
+    with open('key.txt', 'r') as keylock:
         key = str(keylock.read())
 
     return key
@@ -23,7 +23,3 @@ def get_settings():
     setting_tuple = (sender, password, server)
 
     return setting_tuple
-
-
-if __name__ == '__main__':
-    get_sender()
