@@ -7,10 +7,6 @@ import settings
 
 
 def send_email(message):
-    # sender = "your.email@isegal.de"
-    # password = "##whatever**"
-
-    # server = smtplib.SMTP("smtp.gmail.com", 587)
     sender = settings.get_settings()[0]
     password = settings.get_settings()[1]
     server = settings.get_settings()[2]
