@@ -9,7 +9,10 @@ def get_sender():
 
 
 def get_key():
-    ...
+    with open('keys.txt', 'r') as keylock:
+        key = str(keylock.read())
+
+    return key
 
 
 def get_settings():
