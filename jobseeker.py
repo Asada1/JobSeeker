@@ -15,9 +15,9 @@ def send_email(message):
 
     try:
         server.login(sender, password)
-        mime = MIMEText(message, 'plain', 'utf-8')
+        message = MIMEText(message, 'plain', 'utf-8')
         message["Subject"] = messages.get_subject()
-        server.sendmail(sender, sender, mime.as_string())
+        server.sendmail(sender, sender, message.as_string())
 
         return "The message was sent successfully!"
 
@@ -27,6 +27,7 @@ def send_email(message):
 
 def main():
     message = messages.get_message()
+    print(type(message))
     print(send_email(message=message))
 
 
