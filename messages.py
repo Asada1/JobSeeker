@@ -5,8 +5,9 @@ def get_message():
 
 
 def get_receiver():
-    with open 
-    receiver = ''
+    with open('receivers.txt', 'r') as receivers_list:
+        for line in receivers_list:
+            receiver = line
 
     return receiver
 
