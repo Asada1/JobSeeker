@@ -5,6 +5,7 @@ def get_message():
 
 
 def get_receiver():
+    with open 
     receiver = ''
 
     return receiver
