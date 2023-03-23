@@ -1,4 +1,4 @@
-from .keybox import texts
+import texts
 
 
 def get_message():
@@ -14,9 +14,7 @@ def get_subject():
 
 
 def get_receiver():
-    with open('keybox/receivers.txt', 'r') as receivers_list:
-        for line in receivers_list:
-            receiver = line
+    receiver = texts.get_receiver()
 
     return receiver
 

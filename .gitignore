@@ -132,9 +132,9 @@ dmypy.json
 private.py
 .messages/
 keybox/receivers.txt
-keybox/hh_vacancies.txt
+keybox/vacancies.txt
 keybox/sender.txt
 keybox/key.txt
 keybox
 .keybox/
-keybox/texts.py
+texts.py
