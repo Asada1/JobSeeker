@@ -1,11 +1,14 @@
+from .keybox import texts
+
+
 def get_message():
-    message = ''
+    message = texts.compose_my_letter()
 
     return message
 
 
 def get_subject():
-    subject = ''
+    subject = texts.make_my_header()
 
     return subject
 
