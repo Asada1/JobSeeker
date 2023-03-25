@@ -28,7 +28,6 @@ def send_email(message):
 def main():
     message = messages.get_message()
     print(send_email(message=message))
-    print(message)
 
 
 if __name__ == '__main__':
