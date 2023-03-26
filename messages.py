@@ -8,16 +8,16 @@ class Message:
         self.receiver = receiver
 
     def get_message(self):
-        message = texts.compose_my_letter()
-        return message
+        self.message = texts.compose_my_letter()
+        return self.message
 
     def get_subject(self):
-        subject = texts.make_my_header()
-        return subject
+        self.subject = texts.make_my_header()
+        return self.subject
 
     def get_receiver(self):
-        receiver = texts.get_receiver()
-        return receiver
+        self.receiver = texts.get_receiver()
+        return self.receiver
 
 
 def get_header():
