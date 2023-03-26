@@ -1,8 +1,9 @@
 class Message:
     def get_message(self):
         with open('tools/texts.txt', 'r') as texts:
-            text = texts.read()
-        return text
+            for line in texts.read():
+                text = line
+                return text
 
     def get_subject(self):
         with open('tools/subjects.txt', 'r') as subjects:
