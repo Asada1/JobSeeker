@@ -1,6 +1,7 @@
 class Message:
     def get_message(self):
-        message = 'hello'
+        with open 
+        message = f'{vacancy}'
         return message
 
     def get_subject(self):
