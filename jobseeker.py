@@ -1,15 +1,12 @@
 import smtplib
 from email.mime.text import MIMEText
 
-from messages import Message
+import messages
 import settings
 
 
-text = Message()
-
-
 def send_email(message):
-    receiver = text.get_receiver()
+    receiver = messages.get_receiver()
     sender = settings.get_sender()
     password = settings.get_key()
     server = smtplib.SMTP("smtp.gmail.com", 587)
@@ -18,7 +15,7 @@ def send_email(message):
     try:
         server.login(sender, password)
         message = MIMEText(message, 'plain', 'utf-8')
-        message["Subject"] = text.get_subject()
+        message["Subject"] = messages.get_subject()
         server.sendmail(sender, receiver, message.as_string())
 
         return "The message was sent successfully!"
@@ -28,7 +25,7 @@ def send_email(message):
 
 
 def main():
-    message = text.get_message()
+    message = messages.get_message()
     print(send_email(message=message))
 
 
