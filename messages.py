@@ -7,16 +7,16 @@ class Message:
         return message
 
     def get_subject(self):
-        self.subject = 'subject'
-        return self.subject
+        subject = 'subject'
+        return subject
 
     def get_receiver(self):
-        self.receiver = 'receiver'
-        return self.receiver
+        receiver = 'receiver'
+        return receiver
 
 
 message = Message()
 
 
 if __name__ == '__main__':
-    print(message.get_message())
+    print(message.get_message(), message.get_receiver(), message.get_subject())
