@@ -7,10 +7,12 @@ class Message:
 
     def get_subject(self):
         with open('tools/subjects.txt', 'r') as subjects:
-            subject = subjects.read()
-        return subject
+            for line in subjects.read():
+                subject = line
+                return subject
 
     def get_receiver(self):
         with open('tools/receivers.txt', 'r') as receivers:
-            receiver = receivers.read()
-        return receiver
+            for line in receivers.read():
+                receiver = line
+                return receiver
