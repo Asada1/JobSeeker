@@ -131,10 +131,12 @@ dmypy.json
 .idea/
 private.py
 .messages/
-keybox/receivers.txt
-keybox/vacancies.txt
+tools/receivers.txt
+tools/vacancies.txt
 keybox/sender.txt
 keybox/key.txt
 keybox
 .keybox/
 texts.py
+tools
+.tools/
