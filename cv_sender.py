@@ -6,17 +6,19 @@ import settings
 
 
 def send_email(message):
-    receiver = messages.get_receiver()
     sender = settings.get_sender()
     password = settings.get_key()
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
 
     try:
+        tolist = messages.get_receiver()
         server.login(sender, password)
         message = MIMEText(message, 'plain', 'utf-8')
         message["Subject"] = messages.get_subject()
-        server.sendmail(sender, receiver, message.as_string())
+        message["From"] = sender
+        #message["To"] = tolist
+        server.sendmail(sender, tolist, message.as_string())
 
         return "The message was sent successfully!"
 

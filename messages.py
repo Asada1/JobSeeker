@@ -12,5 +12,6 @@ def get_subject():
 
 def get_receiver():
     with open('tools/receivers.txt', 'r') as receivers:
-        receiver = receivers.read()
+        receiver = receivers.readlines()
+
     return receiver
