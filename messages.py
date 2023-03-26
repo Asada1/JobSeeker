@@ -1,6 +1,3 @@
-import texts
-
-
 class Message:
     def get_message(self):
         message = 'hello'
