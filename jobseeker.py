@@ -1,9 +1,11 @@
 import smtplib
 from email.mime.text import MIMEText
 
-import messages
+from messages import Message
 import settings
 
+
+message = Message()
 
 def send_email(message):
     sender = settings.get_sender()
