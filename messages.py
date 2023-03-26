@@ -1,8 +1,8 @@
 class Message:
     def get_message(self):
-        with open 
+        with open
         message = f'{vacancy}'
-        return message
+        return message, vacancy
 
     def get_subject(self):
         subject = 'subject'
