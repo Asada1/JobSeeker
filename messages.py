@@ -1,20 +1,15 @@
 class Message:
     def get_message(self):
-        with open
-        message = f'{vacancy}'
-        return message, vacancy
+        with open('keybox/texts.txt', 'r') as texts:
+            text = texts.read()
+        return text
 
     def get_subject(self):
-        subject = 'subject'
+        with open('keybox/subjects.txt', 'r') as subjects:
+            subject = subjects.read()
         return subject
 
     def get_receiver(self):
-        receiver = 'receiver'
+        with open('keybox/receivers.txt', 'r') as receivers:
+            receiver = receivers.read()
         return receiver
-
-
-message = Message()
-
-
-if __name__ == '__main__':
-    print(message.get_message(), message.get_receiver(), message.get_subject())
