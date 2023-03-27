@@ -10,7 +10,7 @@ def mass_subject():
     return subject
 
 
-def get_receiver():
+def mass_receiver():
     with open('tools/receivers.txt', 'r') as receivers:
         receiver = receivers.readlines()
     return receiver
