@@ -1,7 +1,7 @@
 def get_message():
-    with open('tools/texts.txt', 'r') as texts:
-        text = texts.read()
-    return text
+    with open('tools/text.txt', 'r') as message_text:
+        message = message_text.read()
+    return message
 
 
 def get_subject():
