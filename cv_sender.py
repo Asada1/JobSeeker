@@ -17,7 +17,7 @@ def send_email(message):
         message = MIMEText(message, 'plain', 'utf-8')
         message["Subject"] = messages.get_subject()
         message["From"] = sender
-        #message["To"] = tolist
+        message["To"] = ', '.join(tolist)
         server.sendmail(sender, tolist, message.as_string())
 
         return "The message was sent successfully!"
