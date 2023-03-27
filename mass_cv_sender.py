@@ -10,6 +10,10 @@ def get_set_messages():
     message_subject = ''
     message_receivers = ''
 
+    message_list = [message_text, message_subject, message_receivers]
+
+    return message_list
+
 
 def send_email(message):
     sender = settings.get_sender()
