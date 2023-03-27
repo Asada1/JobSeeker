@@ -5,6 +5,10 @@ import settings
 import messages
 
 
+def get_set_messages():
+    ...
+
+
 def send_email(message):
     sender = settings.get_sender()
     password = settings.get_key()
