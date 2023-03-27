@@ -6,7 +6,9 @@ import messages
 
 
 def get_set_messages():
-    ...
+    message_text = ''
+    message_subject = ''
+    message_receivers = ''
 
 
 def send_email(message):
