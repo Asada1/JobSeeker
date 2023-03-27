@@ -4,7 +4,7 @@ def mass_message():
     return message
 
 
-def get_subject():
+def mass_subject():
     with open('tools/subjects.txt', 'r') as subjects:
         subject = subjects.readlines()
     return subject
