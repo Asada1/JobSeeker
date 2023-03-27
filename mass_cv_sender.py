@@ -6,7 +6,7 @@ import messages
 
 
 def get_set_messages():
-    RAM
+    ...
 
 
 def send_email(message):
