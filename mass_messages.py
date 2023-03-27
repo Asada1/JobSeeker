@@ -1,4 +1,4 @@
-def get_message():
+def mass_message():
     with open('tools/text.txt', 'r') as message_text:
         message = message_text.readlines()
     return message
