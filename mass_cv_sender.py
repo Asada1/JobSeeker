@@ -2,7 +2,7 @@ import smtplib
 from email.mime.text import MIMEText
 
 import settings
-import mass_messages
+import mass_messages as mm
 
 
 def get_set_messages():
