@@ -6,7 +6,7 @@ import mass_messages as mm
 
 
 def get_set_messages():
-    message_text = ''
+    message_text = mm.mass_message()
     message_subject = ''
     message_receivers = ''
 
