@@ -16,21 +16,21 @@ def get_set_messages():
 
 
 def send_email():
-    message_set = get_set_messages()
-    for set in message_set:
-        sender = settings.get_sender()
-        password = settings.get_key()
-        server = smtplib.SMTP("smtp.gmail.com", 587)
-        server.starttls()
+    sender = settings.get_sender()
+    password = settings.get_key()
+    server = smtplib.SMTP("smtp.gmail.com", 587)
+    server.starttls()
 
+    message_set = get_set_messages()
+    for a_set in message_set:
         try:
-            receiver = set[0]
+            receiver = a_set[0]
             server.login(sender, password)
-            message = set[2]
+            message = a_set[2]
             message = MIMEText(message, 'plain', 'utf-8')
-            message["Subject"] = set[1]
+            message["Subject"] = a_set[1]
             message["From"] = sender
-            message["To"] = set[0]
+            message["To"] = a_set[0]
             server.sendmail(sender, receiver, message.as_string())
 
             return "The message was sent successfully!"
