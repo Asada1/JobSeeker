@@ -10,7 +10,7 @@ def get_set_messages():
     message_subject = mm.mass_subject()
     message_receivers = mm.mass_receiver()
 
-    message_list = [message_text, message_subject, message_receivers]
+    message_list = list(zip(message_text, message_subject, message_receivers))
 
     return message_list
 
