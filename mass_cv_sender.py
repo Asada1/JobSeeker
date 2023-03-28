@@ -15,7 +15,7 @@ def get_set_messages():
     return message_list
 
 
-def send_email(message):
+def send_email():
     message_set = get_set_messages()
     for set in message_set:
         sender = settings.get_sender()
@@ -26,10 +26,11 @@ def send_email(message):
         try:
             receiver = set[0]
             server.login(sender, password)
+            message = set[2]
             message = MIMEText(message, 'plain', 'utf-8')
-            message["Subject"] = messages.get_subject()
+            message["Subject"] = set[1]
             message["From"] = sender
-            message["To"] = ', '.join(tolist)
+            message["To"] = set[0]
             server.sendmail(sender, receiver, message.as_string())
 
             return "The message was sent successfully!"
@@ -39,8 +40,7 @@ def send_email(message):
 
 
 def main():
-    message = messages.get_message()
-    print(send_email(message=message))
+    print(send_email())
 
 
 if __name__ == '__main__':
