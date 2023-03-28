@@ -6,9 +6,9 @@ import mass_messages as mm
 
 
 def get_set_messages():
-    message_text = mm.mass_message()
-    message_subject = mm.mass_subject()
     message_receivers = mm.mass_receiver()
+    message_subject = mm.mass_subject()
+    message_text = mm.mass_message()
 
     message_list = list(zip(message_text, message_subject, message_receivers))
 
