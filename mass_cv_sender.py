@@ -32,8 +32,8 @@ def send_email():
             message["From"] = sender
             message["To"] = a_set[0]
             server.sendmail(sender, receiver, message.as_string())
-
-            return "The message was sent successfully!"
+            print(a_set)
+            print("The message was sent successfully!")
 
         except Exception as _ex:
             return f"{_ex}\nSomething went wrong... Please, check your settings!"
