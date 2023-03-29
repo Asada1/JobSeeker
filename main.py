@@ -5,7 +5,7 @@ import various_message_sender
 def menu():
     print("""Welcome to the JobSeeker!
           Actually this project was created to send CV here and there,
-          but you may use it for daily mailing as well.
+          but you may use it for daily business mailing as well.
           
           Before running the program please make sure all the files for the automated mailing are updated!
           
