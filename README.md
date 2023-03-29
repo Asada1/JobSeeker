@@ -1,2 +1,2 @@
 # JobSeeker
-Automated CV sender
+Automated email sender
