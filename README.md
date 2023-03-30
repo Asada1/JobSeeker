@@ -11,5 +11,6 @@ You need to set up three files (I used simple 'txt' format, but you may redo the
 - 'receivers' - a list of receivers
 - 'subject'/'subjects' - email subject/list of subjects for various messages
 - 'text'/'texts' - message text/set of texts for various messages
+- 'attachments' - if you need to attach a file to your letter
 
 Before running the program please make sure all the files for the automated mailing are updated!
