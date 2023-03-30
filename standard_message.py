@@ -1,3 +1,7 @@
+from email.mime.application import MIMEApplication
+from email.mime.base import MIMEBase
+
+
 def get_message():
     with open('email_stuff/standard/message_text.txt', 'r') as message_text:
         message = message_text.read()
@@ -14,3 +18,9 @@ def get_receiver():
     with open('email_stuff/standard/receivers.txt', 'r') as receivers:
         receiver = receivers.readlines()
     return receiver
+
+
+def get_file():
+    with open()as attachment:
+        file = attachment
+    return file
