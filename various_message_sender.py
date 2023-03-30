@@ -1,9 +1,11 @@
+import os
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 import settings
 import various_messages as vm
+import standard_message as sm
 
 
 def get_set_messages():
@@ -34,6 +36,9 @@ def send_email():
             message["Subject"] = a_set[1]
             message_text = a_set[2]
             message.attach(MIMEText(message_text, 'plain', 'utf-8'))
+            file = sm.get_file()
+            filename = os.path.basename(file)
+            file.add_header('content-disposition', 'attachment', filename=filename)
             message.attach(file)
             server.sendmail(sender, receiver, message.as_string())
             print(a_set)
