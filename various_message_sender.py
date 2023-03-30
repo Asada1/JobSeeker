@@ -50,6 +50,7 @@ def send_email():
                     encoders.encode_base64(file)
                 file.add_header('content-disposition', 'attachment', filename=filename)
                 message.attach(file)
+
             server.sendmail(sender, receiver, message.as_string())
             print(a_set)
             print("The message was sent successfully!")
