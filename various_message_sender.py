@@ -1,5 +1,6 @@
 import smtplib
 from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 import settings
 import various_messages as vm
@@ -26,11 +27,14 @@ def send_email():
         try:
             receiver = a_set[0]
             server.login(sender, password)
-            message = a_set[2]
-            message = MIMEText(message, 'plain', 'utf-8')
-            message["Subject"] = a_set[1]
+            # message = MIMEText(message, 'plain', 'utf-8')
+            message = MIMEMultipart()
             message["From"] = sender
             message["To"] = a_set[0]
+            message["Subject"] = a_set[1]
+            message_text = a_set[2]
+            message.attach(MIMEText(message_text, 'plain', 'utf-8'))
+            message.attach(file)
             server.sendmail(sender, receiver, message.as_string())
             print(a_set)
             print("The message was sent successfully!")
