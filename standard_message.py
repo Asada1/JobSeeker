@@ -27,7 +27,6 @@ def get_receiver():
 
 def get_file():
     for file in tqdm(os.listdir("attachments")):
-        filename = os.path.basename(file)
         ftype, encoding = mimetypes.guess_type(file)
         file_type, subtype = ftype.split("/")
 
@@ -44,8 +43,5 @@ def get_file():
                 file = MIMEBase(file_type, subtype)
                 file.set_payload(f.read())
                 encoders.encode_base64(file)
-
-        file.add_header('content-disposition', 'attachment', filename=filename)
-        msg.attach(file)
 
     return file
