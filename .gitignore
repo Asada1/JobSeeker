@@ -140,3 +140,5 @@ keybox
 texts.py
 email_stuff
 .tools/
+attachments
+.attachments/
