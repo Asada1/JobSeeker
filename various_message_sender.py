@@ -1,11 +1,14 @@
+import mimetypes
 import os
 import smtplib
+from email import encoders
+from email.mime.base import MIMEBase
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from tqdm import tqdm
 
 import settings
 import various_messages as vm
-import standard_message as sm
 
 
 def get_set_messages():
@@ -36,10 +39,17 @@ def send_email():
             message["Subject"] = a_set[1]
             message_text = a_set[2]
             message.attach(MIMEText(message_text, 'plain', 'utf-8'))
-            file = sm.get_file()
-            filename = os.path.basename(file)
-            file.add_header('content-disposition', 'attachment', filename=filename)
-            message.attach(file)
+
+            for file in tqdm(os.listdir("attachments")):
+                filename = os.path.basename(file)
+                ftype, encoding = mimetypes.guess_type(file)
+                file_type, subtype = ftype.split("/")
+                with open(f"attachments/{file}", "rb") as f:
+                    file = MIMEBase(file_type, subtype)
+                    file.set_payload(f.read())
+                    encoders.encode_base64(file)
+                file.add_header('content-disposition', 'attachment', filename=filename)
+                message.attach(file)
             server.sendmail(sender, receiver, message.as_string())
             print(a_set)
             print("The message was sent successfully!")
