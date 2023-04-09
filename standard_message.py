@@ -13,5 +13,4 @@ def get_subject():
 def get_receiver():
     with open('email/standard/receivers.txt', 'r', encoding='utf-8') as receivers:
         receiver = receivers.readlines()
-
     return receiver
