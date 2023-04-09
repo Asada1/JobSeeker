@@ -7,7 +7,6 @@ def get_message():
 def get_subject():
     with open('email/standard/message_subject.txt', 'r', encoding='utf-8') as letter_subject:
         subject = letter_subject.read()
-
     return subject
 
 
