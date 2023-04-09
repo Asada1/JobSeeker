@@ -15,3 +15,4 @@ def get_receiver():
         receiver = receivers.readlines()
     return receiver
 
+
