@@ -1,6 +1,7 @@
 def get_message():
     with open('email/standard/message_text.txt', 'r', encoding='utf-8') as message_text:
         message = message_text.read()
+        
     return message
 
 
