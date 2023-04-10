@@ -16,4 +16,3 @@ def get_receiver():
     return receiver
 
 
-
