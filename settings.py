@@ -7,5 +7,4 @@ def get_sender():
 def get_key():
     with open('keybox/key.txt', 'r') as keylock:
         key = keylock.read()
-
     return key
