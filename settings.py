@@ -1,7 +1,6 @@
 def get_sender():
     with open('keybox/sender.txt', 'r') as senders:
         sender = senders.read()
-
     return sender
 
 
