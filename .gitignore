@@ -139,6 +139,8 @@ keybox
 .keybox/
 texts.py
 email_stuff
+email
+.email/
 .tools/
 attachments
 .attachments/
